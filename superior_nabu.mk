@@ -12,9 +12,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common Awaken stuff.
-$(call inherit-product, vendor/awaken/config/common_full_tablet_wifionly.mk)
+# Inherit some common Superior stuff.
+$(call inherit-product, vendor/superior/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Maintainer Flag (one word only/no spacing)
+MAINTAINER := saikiran
+
+# GAPPS build flag, if not defined build type is vanilla
+BUILD_WITH_GAPPS := true
+
+# Charging Animation
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
+# Quick Tap Feature
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# Disable/Enable Blur Support, default is false
+TARGET_ENABLE_BLUR := true
+
+# Superior Prebuilts
+USE_MOTO_CALCULATOR := true
 
 # Inherit some common AOSP stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -23,7 +41,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 # Inherit device configuration for nabu.
 $(call inherit-product, device/xiaomi/nabu/device.mk)
 
-PRODUCT_NAME := awaken_nabu
+PRODUCT_NAME := superior_nabu
 PRODUCT_DEVICE := nabu
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
