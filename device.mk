@@ -404,10 +404,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
-# Trust
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # Telephony & IMS  
 PRODUCT_PACKAGES += \
     ims-ext-common \
